@@ -18,9 +18,6 @@ const config = {
       },
     },
     extend: {
-      flex: {
-        full: "0 0 100%",
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -77,10 +74,7 @@ const config = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require('tailwind-scrollbar-hide')
-  ],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config
 
 export default config

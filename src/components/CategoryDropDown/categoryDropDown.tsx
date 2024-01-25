@@ -25,7 +25,7 @@ export default async function CategoryDropDown() {
     // console.log(data)
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-x-2 justify-center">Category <FaAngleDown /></DropdownMenuTrigger>
+            <DropdownMenuTrigger className="flex items-center gap-x-2 justify-center text-xl font-semibold">Category <FaAngleDown /></DropdownMenuTrigger>
             <DropdownMenuContent >
                 {data.genres.map((category)=>(
                     <DropdownMenuItem key={category.id}>

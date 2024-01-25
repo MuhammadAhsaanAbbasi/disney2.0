@@ -16,8 +16,8 @@ const SearchPage = async ({params:{term}}:Props) => {
     const popularMovies = await getPopularMovies()
     return (
         <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col space-y-5 mt-20">
-                <h1 className="text-6xl font-bold px-10">Results For: {termToUse}</h1>
+            <div className="flex flex-col space-y-5 mt-10">
+                <h1 className="text-6xl font-bold px-7">Results For: {termToUse}</h1>
                 <MoviesCarousel title="Movies" movies={movies} isVertical/>
                 <MoviesCarousel title="You May Also Like it" movies={popularMovies} />
             </div>
