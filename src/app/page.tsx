@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <>
       <CarouselBannerWrapper/>
-      <div>
+      <div className="flex flex-col space-y-2 xl:-mt-48 py-4">
         <MoviesCarousel title="UpComing Movies" movies={upComingMovies}/>
         <MoviesCarousel title="TopRated Movies" movies={topRatedMovies}/>
         <MoviesCarousel title="Popular Movies" movies={popularMovies}/>

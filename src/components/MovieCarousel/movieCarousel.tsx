@@ -14,7 +14,7 @@ const MoviesCarousel = ({title,movies,isVertical}:Props) => {
             <h2 className='text-4xl font-semibold px-3'>{title}</h2>
             <div className={cn("flex space-x-4 overflow-scroll px-5 lg:px-10 py-5 scrollbar-hide",isVertical&&"flex-col space-x-0 space-y-12")}>
                 {isVertical?
-                    movies.map((movie)=>(
+                    movies?.map((movie)=>(
                         <div key={movie.id} 
                         className='flex flex-col space-y-5 mb-5 items-center lg:flex-row space-x-5'>
                             <MovieCard movie={movie}/>
@@ -26,7 +26,7 @@ const MoviesCarousel = ({title,movies,isVertical}:Props) => {
                         </div>
                     ))
                     :
-                    movies.map((movie)=>(
+                    movies?.map((movie)=>(
                         <MovieCard key={movie.id} movie={movie}/>
                     ))}
             </div>
