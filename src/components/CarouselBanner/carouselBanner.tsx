@@ -20,7 +20,7 @@ const CarouselBanner = ({ movies }: { movies: Movie[] }) => {
     return (
         <Carousel
             plugins={[plugin.current]}
-            className="w-full relative cursor-pointer lg:-mt-40 -z-20"
+            className="w-full relative cursor-pointer lg:-mt-28 -z-20"
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
         >
