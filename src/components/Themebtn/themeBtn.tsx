@@ -24,7 +24,7 @@ export default function ThemeBtn() {
                 onClick={()=>setIsicons(!Isicons)}
                 checked={themeMode==="dark"}
             />
-            <span className="text-xl font-bold">{Isicons?<MdOutlineLightMode size={30} className="" />:<MdOutlineDarkMode size={30} className="text-red-500" />}</span>
+            <span className="text-xl font-bold">{Isicons?<MdOutlineDarkMode size={30} className="" />:<MdOutlineLightMode size={30} className="text-white" />}</span>
         </label>
     );
 }
