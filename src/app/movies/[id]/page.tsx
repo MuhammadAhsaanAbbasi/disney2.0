@@ -1,7 +1,7 @@
 import CarouselBannerWrapper from "@/components/CarouselBanner/carouselBannerWrapper"
 import { getMovie, getMovieVideos, getPopularMovies, getSearchMovies } from "@/components/MovieCarousel/getMovies"
 import MoviesCarousel from "@/components/MovieCarousel/movieCarousel"
-import VideoBannerWrapper from "@/components/MovieComponent/VideoBanner/VideoBannerWrapper"
+import VideoBannerWrapper from "@/components/MovieComponent/VideoBannerWrapper"
 import { notFound } from "next/navigation"
 
 type Props = {

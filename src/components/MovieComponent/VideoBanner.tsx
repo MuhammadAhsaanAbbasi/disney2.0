@@ -1,8 +1,8 @@
 import React from 'react'
-import { MovieData, VideoData } from '../../../../typings'
+import { MovieData,VideoData } from '../../../typings'
 import getImagePath from '@/components/MovieCarousel/getImagePath'
 import Image from 'next/image'
-import PlayButton from '../PlayButton/playButton'
+import PlayButton from './playButton'
 
 const VideoBanner = ({ movies, videos }: { movies: MovieData, videos: VideoData[] }) => {
     const trailerMovie = videos.find((video)=>video.type =="Trailer")
@@ -39,9 +39,7 @@ const VideoBanner = ({ movies, videos }: { movies: MovieData, videos: VideoData[
                                     </div>
                                 ))}
                             </div>
-                            <div>
                                 <PlayButton videos={trailerMovie}/>
-                            </div>
                             <div className='flex flex-col justify-center gap-y-2'>
                                 <h2 className='text-xl font-semibold'>OverView</h2>
                                 <p className='max-w-xl text-lg font-normal'>{movies.overview}</p>

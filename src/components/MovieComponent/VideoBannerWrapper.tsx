@@ -1,5 +1,5 @@
 import React from 'react'
-import { getDiscoverMovies, getMovie, getMovieVideos } from '../../MovieCarousel/getMovies'
+import { getMovie,getMovieVideos } from '../MovieCarousel/getMovies'
 import VideoBanner from './VideoBanner'
 type Props = {
   id:number
