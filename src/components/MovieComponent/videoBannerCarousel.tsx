@@ -1,4 +1,3 @@
-import React from 'react'
 import { getMovie,getMovieVideos } from '@/components/MovieCarousel/getMovies'
 import VideoBanner from './videoBanner'
 

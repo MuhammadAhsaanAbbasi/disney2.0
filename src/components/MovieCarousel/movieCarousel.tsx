@@ -10,7 +10,7 @@ type Props ={
 }
 const MoviesCarousel = ({title,movies,isVertical}:Props) => {
     return (
-        <div className='z-50'>
+        <section className='relative'>
             <h2 className='text-4xl font-semibold px-3'>{title}</h2>
             <div className={cn("flex space-x-4 overflow-scroll px-5 lg:px-10 py-5 scrollbar-hide",isVertical&&"flex-col space-x-0 space-y-12")}>
                 {isVertical?
@@ -30,7 +30,7 @@ const MoviesCarousel = ({title,movies,isVertical}:Props) => {
                         <MovieCard key={movie.id} movie={movie}/>
                     ))}
             </div>
-        </div>
+        </section>
     )
 }
 

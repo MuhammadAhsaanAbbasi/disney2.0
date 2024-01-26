@@ -56,7 +56,7 @@ export async function getSearchMovies(term:string){
 }
 
 export async function getMovieVideos(movie_id:number){
-    const url = new URL(`https://api.themoviedb.org/3/movie/${movie_id}/videos`)
+    const url = `https://api.themoviedb.org/3/movie/${movie_id}/videos`
     const options:RequestInit={
         method: 'GET',
         headers: {
@@ -67,13 +67,13 @@ export async function getMovieVideos(movie_id:number){
             revalidate:  60 * 60 * 24
         }
     }
-    const response = await fetch(url.toString(),options)
+    const response = await fetch(url,options)
     const data = await(response.json()) as Results 
     return data.results
 }
 
 export async function getMovie(movie_id:number){
-    const url = new URL(`https://api.themoviedb.org/3/movie/${movie_id}?language=en-US`)
+    const url = `https://api.themoviedb.org/3/movie/${movie_id}?language=en-US`
     const options:RequestInit={
         method: 'GET',
         headers: {
@@ -84,7 +84,7 @@ export async function getMovie(movie_id:number){
             revalidate:  60 * 60 * 24
         }
     }
-    const response = await fetch(url.toString(),options)
+    const response = await fetch(url,options)
     const data = await(response.json()) as MovieData
     return data
 }

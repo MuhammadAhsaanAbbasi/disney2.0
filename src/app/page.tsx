@@ -1,7 +1,15 @@
 import CarouselBannerWrapper from "@/components/CarouselBanner/carouselBannerWrapper";
 import { getPopularMovies, getTopRatedMovies, getUpComingMovies } from "@/components/MovieCarousel/getMovies";
 import MoviesCarousel from "@/components/MovieCarousel/movieCarousel";
-
+import { PlayCircleIcon } from 'lucide-react'
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
 
 export default async function Home() {
   const upComingMovies = await getUpComingMovies()

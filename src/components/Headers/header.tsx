@@ -7,8 +7,7 @@ import ThemeBtn from '../Themebtn/themeBtn'
 
 const Header = () => {
     return (
-        <header>
-            <div className='flex justify-between items-center px-6'>
+        <header className='flex justify-between items-center px-6 sticky top-0 z-50 bg-transparent dark:bg-gray-800/10'>
                     <Link href={"/"}>
                     <Image
                     src={"/assets/disney.png"}
@@ -23,7 +22,6 @@ const Header = () => {
                         <SearhInput/>
                         <ThemeBtn/>
                     </div>
-            </div>
         </header>
     )
 }
