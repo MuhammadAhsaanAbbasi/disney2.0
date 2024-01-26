@@ -1,7 +1,7 @@
 import CarouselBannerWrapper from "@/components/CarouselBanner/carouselBannerWrapper"
 import { getMovie, getMovieVideos, getPopularMovies, getSearchMovies } from "@/components/MovieCarousel/getMovies"
 import MoviesCarousel from "@/components/MovieCarousel/movieCarousel"
-import VideoBannerWrapper from "@/components/MovieComponent/VideoBannerWrapper"
+import VideoBannerWrapper from "@/components/MovieComponent/videoBannerCarousel"
 import { notFound } from "next/navigation"
 
 type Props = {
@@ -13,9 +13,7 @@ type Props = {
 const MoviePage = async ({params:{id}}:Props) => {
     if(!id) notFound()
     return (
-        <div className="max-w-7xl mx-auto">
             <VideoBannerWrapper id={id}/>
-        </div>
     )
 }
 

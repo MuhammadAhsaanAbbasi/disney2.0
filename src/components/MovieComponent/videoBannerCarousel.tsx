@@ -1,10 +1,10 @@
 import React from 'react'
-import { getMovie,getMovieVideos } from '../MovieCarousel/getMovies'
-import VideoBanner from './VideoBanner'
+import { getMovie,getMovieVideos } from '@/components/MovieCarousel/getMovies'
+import VideoBanner from './videoBanner'
+
 type Props = {
   id:number
 }
-
 
 const VideoBannerWrapper = async ({id}:Props) => {
   const VideoData = await getMovieVideos(id)
@@ -13,3 +13,4 @@ const VideoBannerWrapper = async ({id}:Props) => {
 }
 
 export default VideoBannerWrapper
+

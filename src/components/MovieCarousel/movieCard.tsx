@@ -14,7 +14,7 @@ const MovieCard = ({ movie }: { movie: Movie }) => {
                 />
                 <p className='absolute z-20 bottom-5 left-5 text-xl font-semibold'>{movie.title}</p>
                 <Image
-                    className='w-fit lg:min-w-[400px] h-56 object-cover object-center shadow-md shadow-gray-900 drop-shadow-xl rounded-md'
+                    className='w-fit lg:min-w-[400px] h-56  object-cover object-center shadow-md shadow-gray-900 drop-shadow-xl rounded-md'
                     src={getImagePath(movie.backdrop_path || movie.poster_path)}
                     alt={movie.title}
                     height={1080}
