@@ -1,5 +1,8 @@
-import { getMovie,getMovieVideos } from '@/components/MovieCarousel/getMovies'
+import { getDiscoverMovies, getMovie,getMovieVideos, getPopularMovies } from '@/components/MovieCarousel/getMovies'
 import VideoBanner from './videoBanner'
+import OfficialVideos from './officialVideos'
+import MoviesCarousel from '../MovieCarousel/movieCarousel'
+import ContentWrapper from './contentWrapper'
 
 type Props = {
   id:number
@@ -8,7 +11,14 @@ type Props = {
 const VideoBannerWrapper = async ({id}:Props) => {
   const VideoData = await getMovieVideos(id)
   const MoviesData = await getMovie(id)
-  return <VideoBanner movies={MoviesData} videos={VideoData}/>
+  const popularMovies = await getDiscoverMovies()
+  return (
+    <>
+    <VideoBanner movies={MoviesData} videos={VideoData}/>
+    <OfficialVideos videos={VideoData}/>
+    <MoviesCarousel title="You May Also Like it" movies={popularMovies} />
+    </>
+  )
 }
 
 export default VideoBannerWrapper

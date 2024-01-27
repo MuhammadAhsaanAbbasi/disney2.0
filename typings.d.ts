@@ -60,6 +60,7 @@ export type MovieData = {
     original_title: string;
     overview: string;
     popularity: number;
+    runtime: number,
     poster_path?: string;
     release_date: string;
     status: string,

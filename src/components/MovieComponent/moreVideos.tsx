@@ -13,7 +13,7 @@ import {
 import ReactPlayer from 'react-player'
 
 
-export function TrailerMovie  ({video}:{video:VideoData | undefined})  {
+export function MoreVideos  ({video}:{video:VideoData | undefined})  {
     const [Open, setOpen] = useState(false)
     return (
         <Dialog
@@ -22,8 +22,8 @@ export function TrailerMovie  ({video}:{video:VideoData | undefined})  {
             setOpen(setOpenChange)
         }}
         >
-            <DialogTrigger className='flex items-center gap-x-2 text-xl hover:text-blue-600 hover:scale-[1.04] transition-all duration-300 ease-in-out'>
-                <PlayCircleIcon className='cursor-pointer' size={60} /><span>Watch Trailer</span>
+            <DialogTrigger className=''>
+                <PlayCircleIcon className='cursor-pointer' size={30} />
                 </DialogTrigger>
             <DialogContent className="h-[65vh] w-full bg-transparent border-none">
             <ReactPlayer 
