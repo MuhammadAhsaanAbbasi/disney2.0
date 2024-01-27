@@ -6,7 +6,6 @@ import { motion } from "framer-motion"
 import { formatTime } from '@/utils/utils'
 import { TrailerMovie } from './trailerMovie'
 import ContentWrapper from './contentWrapper'
-import OfficialVideos from './officialVideos'
 
 const VideoBanner = ({ movies, videos }: { movies: MovieData, videos: VideoData[] }) => {
     const Variants = {

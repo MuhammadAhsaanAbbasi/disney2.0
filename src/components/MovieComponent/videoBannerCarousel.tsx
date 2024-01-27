@@ -1,5 +1,5 @@
 import { getDiscoverMovies, getMovie,getMovieVideos} from '@/components/MovieCarousel/getMovies'
-import VideoBanner from './videoBanner'
+import VideoBanner from './VideoBanner'
 import OfficialVideos from './officialVideos'
 import MoviesCarousel from '../MovieCarousel/movieCarousel'
 
