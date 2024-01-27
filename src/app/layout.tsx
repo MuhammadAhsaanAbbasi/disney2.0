@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Headers/header";
 import ThemeLayout from "@/components/Themebtn/themeLayout";
-
+import { ClerkProvider } from '@clerk/nextjs'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +18,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} dark:bg-[#1A1C29] transition duration-500` }>
-        <ThemeLayout>
-        <Header/>
-        {children}
-        </ThemeLayout>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${inter.className} dark:bg-[#1A1C29] transition duration-500`}>
+          <ThemeLayout>
+            <Header />
+            {children}
+          </ThemeLayout>
         </body>
-    </html>
+      </html>
+    </ClerkProvider>
   );
 }

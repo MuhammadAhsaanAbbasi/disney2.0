@@ -12,6 +12,8 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import getImagePath from '../MovieCarousel/getImagePath'
+import { SignInButton, SignedOut } from '@clerk/nextjs'
+import { Button } from '../ui/button'
 
 const CarouselBanner = ({ movies }: { movies: Movie[] }) => {
     const scale = {
@@ -39,28 +41,33 @@ const CarouselBanner = ({ movies }: { movies: Movie[] }) => {
                                 height={1080}
                             />
                             <div className='hidden lg:inline absolute mt-0 top-0 pt-40 xl:pt-52 left-0 lg:mt-40 bg-transparent z-20 h-full w-full bg-gradient-to-r from-gray-900/90 via-transparent to-transparent p-10 space-y-5 text-white'>
-                                <motion.h2 
-                                className='max-w-xl z-50 text-4xl font-semibold'
-                                variants={scale}
-                                initial="hidden"
-                                whileInView="visible"
-                                transition={{
-                                    delay: 0.2,
-                                    duration: 2,
-                                    ease: 'easeInOut'
-                                }}
+                                <motion.h2
+                                    className='max-w-xl z-50 text-4xl font-semibold'
+                                    variants={scale}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    transition={{
+                                        delay: 0.2,
+                                        duration: 2,
+                                        ease: 'easeInOut'
+                                    }}
                                 >{movie.title}</motion.h2>
-                                <motion.p 
-                                className='max-w-xl line-clamp-3'
-                                variants={scale}
-                                initial="hidden"
-                                whileInView="visible"
-                                transition={{
-                                    delay: 0.2,
-                                    duration: 2,
-                                    ease: 'easeInOut'
-                                }}
+                                <motion.p
+                                    className='max-w-xl line-clamp-3'
+                                    variants={scale}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    transition={{
+                                        delay: 0.2,
+                                        duration: 2,
+                                        ease: 'easeInOut'
+                                    }}
                                 >{movie.overview}</motion.p>
+                                <SignedOut>
+                                    <SignInButton afterSignInUrl="/">
+                                        <Button>Login</Button>
+                                    </SignInButton>
+                                </SignedOut>
                             </div>
                         </div>
                     </CarouselItem>

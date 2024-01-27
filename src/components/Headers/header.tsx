@@ -5,6 +5,8 @@ import SearhInput from '../MovieInput/movieInput'
 import CategoryDropDown from '../CategoryDropDown/categoryDropDown'
 import ThemeBtn from '../Themebtn/themeBtn'
 import DropDown from './dropDown'
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import { Button } from '../ui/button'
 
 const Header = () => {
     return (
@@ -19,13 +21,28 @@ const Header = () => {
                     />
                     </Link>
                     <div className='hidden md:flex justify-between items-center gap-x-2 md:gap-x-4'>
+                        <SignedIn>
                         <CategoryDropDown/>
                         <SearhInput/>
+                            <UserButton afterSignOutUrl="/" />
+                        </SignedIn>
+                        <SignedOut>
+                            <SignInButton afterSignInUrl="/">
+                                <Button>Login</Button>
+                            </SignInButton>
+                        </SignedOut>
                         <ThemeBtn/>
                     </div>
                     <div className='flex justify-between items-center gap-x-2 md:gap-x-4 md:hidden px-4'>
+                    <SignedIn>
                         <CategoryDropDown/>
                         <DropDown/>
+                        </SignedIn>
+                        <SignedOut>
+                            <SignInButton afterSignInUrl="/">
+                                <Button>Login</Button>
+                            </SignInButton>
+                        </SignedOut>
                     </div>
         </header>
     )

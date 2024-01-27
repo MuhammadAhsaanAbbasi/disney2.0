@@ -1,16 +1,26 @@
+import CarouselBannerWrapper from "@/components/CarouselBanner/carouselBannerWrapper"
 import VideoBannerWrapper from "@/components/MovieComponent/videoBannerCarousel"
+import { Button } from "@/components/ui/button"
+import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs"
 import { notFound } from "next/navigation"
 
 type Props = {
-    params:{
-        id:number
+    params: {
+        id: number
     }
 }
 
-const MoviePage = async ({params:{id}}:Props) => {
-    if(!id) notFound()
+const MoviePage = async ({ params: { id } }: Props) => {
+    if (!id) notFound()
     return (
-            <VideoBannerWrapper id={id}/>
+        <>
+            <SignedIn>
+                <VideoBannerWrapper id={id} />
+            </SignedIn>
+            <SignedOut>
+                    <CarouselBannerWrapper/>
+            </SignedOut>
+        </>
     )
 }
 
