@@ -1,7 +1,9 @@
+"use client"
 import React from 'react'
 import { Movie } from '../../../typings'
 import MovieCard from './movieCard'
 import { cn } from '@/lib/utils'
+import { motion } from "framer-motion"
 
 type Props ={
     title:string,
@@ -9,9 +11,22 @@ type Props ={
     isVertical?:boolean
 }
 const MoviesCarousel = ({title,movies,isVertical}:Props) => {
+    const scale = {
+        hidden: { opacity: 0,  y:30 },
+        visible: { opacity: 1,  y:0 },
+    };
     return (
         <section className='relative'>
-            <h2 className='text-4xl font-semibold px-3'>{title}</h2>
+            <motion.h2 className='text-4xl font-semibold px-3'
+                    variants={scale}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{
+                        delay: 0.1,
+                        duration: 1.5,
+                        ease: "backInOut"
+                    }}
+            >{title}</motion.h2>
             <div className={cn("flex space-x-4 overflow-scroll px-5 lg:px-10 py-5 scrollbar-hide",isVertical&&"flex-col space-x-0 space-y-12")}>
                 {isVertical?
                     movies?.map((movie)=>(
