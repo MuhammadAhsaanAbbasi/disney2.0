@@ -1,8 +1,7 @@
-import { getDiscoverMovies, getMovie,getMovieVideos, getPopularMovies } from '@/components/MovieCarousel/getMovies'
+import { getDiscoverMovies, getMovie,getMovieVideos} from '@/components/MovieCarousel/getMovies'
 import VideoBanner from './videoBanner'
 import OfficialVideos from './officialVideos'
 import MoviesCarousel from '../MovieCarousel/movieCarousel'
-import ContentWrapper from './contentWrapper'
 
 type Props = {
   id:number
