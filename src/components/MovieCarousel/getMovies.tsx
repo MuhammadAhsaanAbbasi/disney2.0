@@ -81,7 +81,7 @@ export async function getMovie(movie_id:number){
             Authorization: `Bearer ${process.env.TMDB_API_KEY}`
         },
         next: {
-            revalidate:  60 * 60 * 24
+            revalidate:  60 * 60 * 24,
         },
     }
     const response = await fetch(url,options)
