@@ -24,7 +24,7 @@ export default function RootLayout({
           <link rel="icon" href="./assets/favicon.ico" />
         </head>
 
-        <body className={`${inter.className} dark:bg-[#1A1C29] transition duration-500`}>
+        <body className={`${inter.className} bg-[rgb(241,242,243)] dark:bg-[#1A1C29] transition duration-500`}>
           <ThemeLayout>
             <Header />
             {children}
