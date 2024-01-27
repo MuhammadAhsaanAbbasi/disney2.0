@@ -20,6 +20,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <link rel="icon" href="./assets/favicon.ico" />
+        </head>
+
         <body className={`${inter.className} dark:bg-[#1A1C29] transition duration-500`}>
           <ThemeLayout>
             <Header />
