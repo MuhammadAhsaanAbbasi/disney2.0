@@ -14,7 +14,7 @@ async function fetchFromTMDB(url:URL,cachTime?:number) {
         },
         next: {
             revalidate: cachTime || 60 * 60 * 24
-        }
+        },
     }
     const response = await fetch(url.toString(),options)
     const data = await(response.json()) as SearchResult 
@@ -65,7 +65,7 @@ export async function getMovieVideos(movie_id:number){
         },
         next: {
             revalidate:  60 * 60 * 24
-        }
+        },
     }
     const response = await fetch(url,options)
     const data = await(response.json()) as Results 
@@ -82,7 +82,7 @@ export async function getMovie(movie_id:number){
         },
         next: {
             revalidate:  60 * 60 * 24
-        }
+        },
     }
     const response = await fetch(url,options)
     const data = await(response.json()) as MovieData
