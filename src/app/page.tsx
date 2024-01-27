@@ -19,13 +19,13 @@ export default async function Home() {
   return (
     <>
       <CarouselBannerWrapper />
-      <SignedIn>
         <div className="flex flex-col space-y-2 xl:-mt-48 py-4">
+      <SignedIn>
           <MoviesCarousel title="UpComing Movies" movies={upComingMovies} />
           <MoviesCarousel title="TopRated Movies" movies={topRatedMovies} />
           <MoviesCarousel title="Popular Movies" movies={popularMovies} />
-        </div>
       </SignedIn>
+        </div>
     </>
   );
 }
